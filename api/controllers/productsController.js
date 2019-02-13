@@ -1,41 +1,29 @@
-var Product = require('../model/appModel.js');
+var product = require('../models/productsModels.js');
 
 exports.list_all_product = function(req, res) {
-  Product.getAllProduct(function(err, product) {
+  product.getAllproduct(function(err, product) {
 
-    console.log('controller')
+    //console.log('controller')
     if (err)
       res.send(err);
-      console.log('res', product);
+      //console.log('res', product);
     res.send(product);
   });
 };
 
-
-
 exports.create_a_product = function(req, res) {
-  var new_product = new Product(req.body);
-
-  //handles null error 
-   if(!new_product.product || !new_product.status){
-
-            res.status(400).send({ error:true, message: 'Please provide product/status' });
-
-        }
-else{
-  
-  Product.createProduct(new_product, function(err, product) {
+  var new_product = new product(req.body);  
+  product.createproduct(new_product, function(err, product) {
     
     if (err)
       res.send(err);
     res.json(product);
   });
-}
 };
 
 
 exports.read_a_product = function(req, res) {
-  Product.getProductById(req.params.productId, function(err, product) {
+  product.getproductById(req.params.productId, function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -44,7 +32,7 @@ exports.read_a_product = function(req, res) {
 
 
 exports.update_a_product = function(req, res) {
-  Product.updateById(req.params.productId, new Product(req.body), function(err, product) {
+  product.updateById(req.params.productId, new product(req.body), function(err, product) {
     if (err)
       res.send(err);
     res.json(product);
@@ -53,7 +41,7 @@ exports.update_a_product = function(req, res) {
 
 
 exports.delete_a_product = function(req, res) {
-  Product.remove( req.params.productId, function(err, product) {
+  product.remove( req.params.productId, function(err, product) {
     if (err)
       res.send(err);
     res.json({ message: 'Product successfully deleted' });

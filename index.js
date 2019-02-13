@@ -7,10 +7,14 @@ const express = require('express'),
 const mysql = require('mysql');
 // connection configurations
 const mc = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'mydb'
+    // host     : 'myfirstdbinstance.cjg6seskxovx.us-east-2.rds.amazonaws.com',
+    // user     : 'root',
+    // password : 'password',
+    // database : 'ProductsDB'
+    host     : 'localhost',
+    user     : 'root',
+    password : 'c0nygre',
+    database : 'productsdb'
 });
  
 // connect to database
@@ -23,5 +27,5 @@ console.log('API server started on: ' + port);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./app/routes/approutes'); //importing route
+var routes = require('./api/routes/productsRoutes'); //importing route
 routes(app); //register the route

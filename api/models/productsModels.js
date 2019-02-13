@@ -1,26 +1,26 @@
 var sql = require('./db.js');
 
 //product object constructor
-var product = function(product){
+var Product = function(product){
     this.name = product.name;
     this.price = product.price;
     this.stock = product.stock;
 };
-product.createproduct = function createUser(newproduct, result) {    
-        sql.query("INSERT INTO products list ?", newproduct, function (err, res) {
+Product.createproduct = function createUser(newproduct, result) {    
+        sql.query("insert into products set ?", newproduct, function (err, res) {
                 
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
                 }
                 else{
-                    console.log(res.insertId);
-                    result(null, res.insertId);
+                    //console.log(res.insertId);
+                    result(null, res);
                 }
             });           
 };
-product.getproductById = function createUser(productId, result) {
-        sql.query("Select name from products where id = ? ", productId, function (err, res) {             
+Product.getproductById = function createUser(productId, result) {
+        sql.query("Select name,price,stock from products where id = ? ", productId, function (err, res) {             
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
@@ -31,22 +31,22 @@ product.getproductById = function createUser(productId, result) {
                 }
             });   
 };
-product.getAllproduct = function getAllproduct(result) {
+Product.getAllproduct = function getAllproduct(result) {
         sql.query("Select * from products", function (err, res) {
 
                 if(err) {
-                    console.log("error: ", err);
+                    //console.log("error: ", err);
                     result(null, err);
                 }
                 else{
-                  console.log('products : ', res);  
+                  //console.log('products : ', res);  
 
                  result(null, res);
                 }
             });   
 };
-product.updateById = function(id, product, result){
-  sql.query("UPDATE products SET name = ?, price = ?, stock =?, WHERE id = ?", [product.name,product.price,product.stock, id], function (err, res) {
+Product.updateById = function(id, product, result){
+  sql.query("UPDATE products SET name = ?, price = ?, stock = ? WHERE id = ?", [product.name,product.price,product.stock, id], function (err, res) {
           if(err) {
               console.log("error: ", err);
                 result(null, err);
@@ -56,7 +56,7 @@ product.updateById = function(id, product, result){
                 }
             }); 
 };
-product.remove = function(id, result){
+Product.remove = function(id, result){
      sql.query("DELETE FROM products WHERE id = ?", [id], function (err, res) {
 
                 if(err) {
@@ -70,4 +70,4 @@ product.remove = function(id, result){
             }); 
 };
 
-module.exports= product;
+module.exports= Product;

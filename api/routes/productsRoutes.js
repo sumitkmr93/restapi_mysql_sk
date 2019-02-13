@@ -7,12 +7,12 @@ var productList = require('../controllers/productsController');
       .get(productList.list_all_product)
       .post(productList.create_a_product);
      
-    app.route('/products/:id')
-      .get(productList.read_a_product)
-      .put(productList.update_a_product)
-      .delete(productList.delete_a_product);
+     app.route('/products/:productId')
+       .get(productList.read_a_product)
+       .put(productList.update_a_product)
+       .delete(productList.delete_a_product);
 
-    app.get('/',(req,res)=>{
-        res.sendFile(__dirname+'/listproducts.html');
-      });
+    // app.get('/',(req,res)=>{
+    //     res.sendFile(__dirname+'/listproducts.html');
+    //   });
   };
