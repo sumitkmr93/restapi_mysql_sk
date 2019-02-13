@@ -1,3 +1,4 @@
+//connecting with db.js
 var sql = require('./db.js');
 
 //product object constructor
@@ -6,6 +7,8 @@ var Product = function(product){
     this.price = product.price;
     this.stock = product.stock;
 };
+
+//function to create a new Product by actual sql query
 Product.createproduct = function createUser(newproduct, result) {    
         sql.query("insert into products set ?", newproduct, function (err, res) {
                 
@@ -19,6 +22,7 @@ Product.createproduct = function createUser(newproduct, result) {
                 }
             });           
 };
+//function to display a new Product by id using actual sql query
 Product.getproductById = function createUser(productId, result) {
         sql.query("Select name,price,stock from products where id = ? ", productId, function (err, res) {             
                 if(err) {
@@ -31,6 +35,7 @@ Product.getproductById = function createUser(productId, result) {
                 }
             });   
 };
+//function to display all Products by actual sql query
 Product.getAllproduct = function getAllproduct(result) {
         sql.query("Select * from products", function (err, res) {
 
@@ -45,6 +50,7 @@ Product.getAllproduct = function getAllproduct(result) {
                 }
             });   
 };
+//function to upadte a Product by id using actual sql query
 Product.updateById = function(id, product, result){
   sql.query("UPDATE products SET name = ?, price = ?, stock = ? WHERE id = ?", [product.name,product.price,product.stock, id], function (err, res) {
           if(err) {
@@ -56,6 +62,7 @@ Product.updateById = function(id, product, result){
                 }
             }); 
 };
+//function to delete a Product by id using actual sql query
 Product.remove = function(id, result){
      sql.query("DELETE FROM products WHERE id = ?", [id], function (err, res) {
 
