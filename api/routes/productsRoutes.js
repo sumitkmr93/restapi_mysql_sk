@@ -12,7 +12,7 @@ var productList = require('../controllers/productsController');
        .put(productList.update_a_product)
        .delete(productList.delete_a_product);
 
-    // app.get('/',(req,res)=>{
-    //     res.sendFile(__dirname+'/listproducts.html');
-    //   });
+    app.get('/',(req,res)=>{
+        res.sendFile(__dirname+'/listproducts.html');
+      });
   };
