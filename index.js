@@ -1,7 +1,7 @@
 const express = require('express'),
   app = express(),
   bodyParser = require('body-parser');
-  port = process.env.PORT || 8081;
+  port = process.env.PORT || 3500;
 
 
 const mysql = require('mysql');
@@ -16,7 +16,7 @@ const mc = mysql.createConnection({
     // password : 'c0nygre',
     // database : 'productsdb'
 });
- 
+
 // connect to database
 mc.connect();
 
