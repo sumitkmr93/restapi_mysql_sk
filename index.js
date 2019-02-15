@@ -1,7 +1,7 @@
 const express = require('express'),
   app = express(),
   bodyParser = require('body-parser');
-  port = process.env.PORT || 3500;
+  port = process.env.PORT || 2500;
 
 
 const mysql = require('mysql');
