@@ -9,9 +9,9 @@ var Product = function(product){
 };
 
 //function to create a new Product by actual sql query
-Product.createproduct = function createUser(newproduct, result) {    
+Product.createproduct = function createUser(newproduct, result) {
         sql.query("insert into products set ?", newproduct, function (err, res) {
-                
+
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
@@ -20,20 +20,20 @@ Product.createproduct = function createUser(newproduct, result) {
                     //console.log(res.insertId);
                     result(null, res);
                 }
-            });           
+            });
 };
 //function to display a new Product by id using actual sql query
 Product.getproductById = function createUser(productId, result) {
-        sql.query("Select name,price,stock from products where id = ? ", productId, function (err, res) {             
+        sql.query("Select id,name,price,stock from products where id = ? ", productId, function (err, res) {             
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
                 }
                 else{
                     result(null, res);
-              
+
                 }
-            });   
+            });
 };
 //function to display all Products by actual sql query
 Product.getAllproduct = function getAllproduct(result) {
@@ -44,11 +44,11 @@ Product.getAllproduct = function getAllproduct(result) {
                     result(null, err);
                 }
                 else{
-                  //console.log('products : ', res);  
+                  //console.log('products : ', res);
 
                  result(null, res);
                 }
-            });   
+            });
 };
 //function to upadte a Product by id using actual sql query
 Product.updateById = function(id, product, result){
@@ -57,10 +57,10 @@ Product.updateById = function(id, product, result){
               console.log("error: ", err);
                 result(null, err);
              }
-           else{   
+           else{
              result(null, res);
                 }
-            }); 
+            });
 };
 //function to delete a Product by id using actual sql query
 Product.remove = function(id, result){
@@ -71,10 +71,10 @@ Product.remove = function(id, result){
                     result(null, err);
                 }
                 else{
-               
+
                  result(null, res);
                 }
-            }); 
+            });
 };
 
 module.exports= Product;
