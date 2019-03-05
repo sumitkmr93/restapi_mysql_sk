@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.8459999999999996" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-03-05T15:43:24" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="/GET all products" timestamp="2019-03-05T15:43:24" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.836">
+    <testcase name="/GET all products it should GET all the bookings" time="0.836" classname="it should GET all the bookings">
+    </testcase>
+  </testsuite>
+  <testsuite name="/POST add a product" timestamp="2019-03-05T15:43:25" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.857">
+    <testcase name="/POST add a product Post a booking" time="0.857" classname="Post a booking">
+    </testcase>
+  </testsuite>
+  <testsuite name="/PUT change a product" timestamp="2019-03-05T15:43:26" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.583">
+    <testcase name="/PUT change a product PUT a booking" time="0.583" classname="PUT a booking">
+    </testcase>
+  </testsuite>
+  <testsuite name="/DELETE a product" timestamp="2019-03-05T15:43:26" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.57">
+    <testcase name="/DELETE a product DELETE a booking" time="0.57" classname="DELETE a booking">
+    </testcase>
+  </testsuite>
+</testsuites>

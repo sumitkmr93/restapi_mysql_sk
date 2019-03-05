@@ -29,6 +29,7 @@ describe('/POST add a product', () => {
         .end((err, res) => {
               res.should.have.status(200);
               res.body.should.be.a('object');
+              console.log('Second test passed');
           done();
         });
   });
@@ -46,6 +47,7 @@ describe('/PUT change a product', () => {
         .end((err, res) => {
               res.should.have.status(200);
               res.body.should.be.a('object');
+              console.log('Third test passed');
           done();
         });
   });
@@ -59,6 +61,7 @@ describe('/DELETE a product', () => {
           res.should.have.status(200);
           res.body.should.be.a('object');
           res.body.should.have.property('message');
+          console.log('Final test passed');
           done();
         });
   });
