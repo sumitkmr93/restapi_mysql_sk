@@ -77,6 +77,12 @@ $(document).ready(function(){
           }
         });
   
+        $("#clearb").on('click',function(){
+          $("#name").val('');
+          $("#price").val(''); 
+          $("#stock").val('');
+              });
+  
   });
   
   
