@@ -7,10 +7,11 @@ const express = require('express'),
 const mysql = require('mysql');
 // connection configurations
 const mc = mysql.createConnection({
-    host     : 'myfirstdbinstance.cjg6seskxovx.us-east-2.rds.amazonaws.com',
-    user     : 'root',
-    password : 'password',
-    database : 'ProductsDB'
+    host     : 'demoproductsdb.mysql.database.azure.com',
+    user     : 'sumit@demoproductsdb',
+    password : 'Kiran@4693',
+    database : 'ProductsDB',
+    ssl:true
     // host     : 'localhost',
     // user     : 'root',
     // password : 'c0nygre',

@@ -1,10 +1,11 @@
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host     : 'myfirstdbinstance.cjg6seskxovx.us-east-2.rds.amazonaws.com',
-    user     : 'root',
-    password : 'password',
-    database : 'ProductsDB'
+    host     : 'demoproductsdb.mysql.database.azure.com',
+    user     : 'sumit@demoproductsdb',
+    password : 'Kiran@4693',
+    database : 'ProductsDB',
+    ssl:true
     // host     : 'localhost',
     // user     : 'root',
     // password : 'c0nygre',

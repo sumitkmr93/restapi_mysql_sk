@@ -52,7 +52,7 @@ $(document).ready(function(){
         type: 'POST',
         data: "name=" +$("#name").val() + "&price=" + $("#price").val() +"&stock=" + $("#stock").val(),
         success: function(response){
-            alert('New Contact Added');
+            alert('New Product Added');
             window.location.reload();
               },
             error: function(err){
