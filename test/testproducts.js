@@ -18,14 +18,14 @@ describe('/GET all products', () => {
 
 describe('/POST add a product', () => {
   it('Post a booking', (done) => {
-      let booking = {
-          name = "TestProduct",
-          price = 20,
-          stock = 100
+      let product = {
+          name : "TestProduct",
+          price : 20,
+          stock : 100
       }
       chai.request('https://productsdemoazure.azurewebsites.net/products')
         .post('/')
-        .send(booking)
+        .send(product)
         .end((err, res) => {
               res.should.have.status(200);
               res.body.should.be.a('object');
@@ -37,12 +37,12 @@ describe('/POST add a product', () => {
 // error when not updating numberofbags
 describe('/PUT change a product', () => {
   it('PUT a booking', (done) => {
-      let booking = {
+      let product = {
         name: "TestProduct",
       }
       chai.request('https://productsdemoazure.azurewebsites.net/products')
         .put('/1')
-        .send(booking)
+        .send(product)
         .end((err, res) => {
               res.should.have.status(200);
               res.body.should.be.a('object');
@@ -54,7 +54,7 @@ describe('/PUT change a product', () => {
 describe('/DELETE a product', () => {
   it('DELETE a booking', (done) => {
       chai.request('https://productsdemoazure.azurewebsites.net/products')
-        .delete('/')
+        .delete('/1')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
