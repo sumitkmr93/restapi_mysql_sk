@@ -6,7 +6,8 @@ let should = chai.should();
 
 //The first test attempts to get all the bookings.
 
-describe('/GET all products', () => {
+describe('/GET all products', function()  {
+  this.timeout(15000);
   it('it should GET all the bookings', (done) => {
     chai.request('https://productsdemoazure.azurewebsites.net/products')
         .get('/')
