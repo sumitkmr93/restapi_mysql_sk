@@ -2,7 +2,10 @@ let chai = require('chai');
 let chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 let should = chai.should();
+
+
 //The first test attempts to get all the bookings.
+
 describe('/GET all products', () => {
   it('it should GET all the bookings', (done) => {
     chai.request('https://productsdemoazure.azurewebsites.net/products')
@@ -66,4 +69,5 @@ describe('/DELETE a product', () => {
         });
   });
 });
+
 

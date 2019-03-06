@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="8.540000000000001" tests="4" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-03-05T16:32:37" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="2.7190000000000003" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-03-06T09:27:22" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="/GET all products" timestamp="2019-03-05T16:32:37" tests="1" file="c:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="5.165">
-    <testcase name="/GET all products it should GET all the bookings" time="5.165" classname="it should GET all the bookings">
+  <testsuite name="Open webapp" timestamp="2019-03-06T09:27:22" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\functionaltest.js" failures="0" time="0.045">
+    <testcase name="Open webapp should work" time="0.045" classname="should work">
     </testcase>
   </testsuite>
-  <testsuite name="/POST add a product" timestamp="2019-03-05T16:32:43" tests="1" file="c:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="1.178">
-    <testcase name="/POST add a product Post a booking" time="1.178" classname="Post a booking">
+  <testsuite name="/GET all products" timestamp="2019-03-06T09:27:22" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.786">
+    <testcase name="/GET all products it should GET all the bookings" time="0.786" classname="it should GET all the bookings">
     </testcase>
   </testsuite>
-  <testsuite name="/PUT change a product" timestamp="2019-03-05T16:32:44" tests="1" file="c:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="1.014">
-    <testcase name="/PUT change a product PUT a booking" time="1.014" classname="PUT a booking">
+  <testsuite name="/POST add a product" timestamp="2019-03-06T09:27:22" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.788">
+    <testcase name="/POST add a product Post a booking" time="0.788" classname="Post a booking">
     </testcase>
   </testsuite>
-  <testsuite name="/DELETE a product" timestamp="2019-03-05T16:32:45" tests="1" file="c:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="1.183">
-    <testcase name="/DELETE a product DELETE a booking" time="1.183" classname="DELETE a booking">
+  <testsuite name="/PUT change a product" timestamp="2019-03-06T09:27:23" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.554">
+    <testcase name="/PUT change a product PUT a booking" time="0.554" classname="PUT a booking">
+    </testcase>
+  </testsuite>
+  <testsuite name="/DELETE a product" timestamp="2019-03-06T09:27:24" tests="1" file="C:\devopsdemo\restapi_mysql_sk\test\testproducts.js" failures="0" time="0.546">
+    <testcase name="/DELETE a product DELETE a booking" time="0.546" classname="DELETE a booking">
     </testcase>
   </testsuite>
 </testsuites>
