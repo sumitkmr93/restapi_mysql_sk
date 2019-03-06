@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="2.6470000000000002" tests="4" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-03-06T11:31:06" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="0.046" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-03-06T11:57:23" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="/GET all products" timestamp="2019-03-06T11:31:06" tests="1" file="C:\devopsdemo\restapi_mysql_sk\tests\unit_test\testproducts.js" failures="0" time="0.615">
-    <testcase name="/GET all products it should GET all the bookings" time="0.615" classname="it should GET all the bookings">
-    </testcase>
-  </testsuite>
-  <testsuite name="/POST add a product" timestamp="2019-03-06T11:31:07" tests="1" file="C:\devopsdemo\restapi_mysql_sk\tests\unit_test\testproducts.js" failures="0" time="0.917">
-    <testcase name="/POST add a product Post a booking" time="0.917" classname="Post a booking">
-    </testcase>
-  </testsuite>
-  <testsuite name="/PUT change a product" timestamp="2019-03-06T11:31:08" tests="1" file="C:\devopsdemo\restapi_mysql_sk\tests\unit_test\testproducts.js" failures="0" time="0.556">
-    <testcase name="/PUT change a product PUT a booking" time="0.556" classname="PUT a booking">
-    </testcase>
-  </testsuite>
-  <testsuite name="/DELETE a product" timestamp="2019-03-06T11:31:08" tests="1" file="C:\devopsdemo\restapi_mysql_sk\tests\unit_test\testproducts.js" failures="0" time="0.559">
-    <testcase name="/DELETE a product DELETE a booking" time="0.559" classname="DELETE a booking">
+  <testsuite name="Open webapp" timestamp="2019-03-06T11:57:23" tests="1" file="C:\devopsdemo\restapi_mysql_sk\tests\func_test\functionaltest.js" failures="0" time="0.046">
+    <testcase name="Open webapp should work" time="0.046" classname="should work">
     </testcase>
   </testsuite>
 </testsuites>

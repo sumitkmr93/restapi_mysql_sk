@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.046" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-03-06T10:50:04" tests="0" failures="0" time="0">
-  </testsuite>
-  <testsuite name="Open webapp" timestamp="2019-03-06T10:50:04" tests="1" file="C:\devopsdemo\restapi_mysql_sk\tests\func_test\functionaltest.js" failures="0" time="0.046">
-    <testcase name="Open webapp should work" time="0.046" classname="should work">
-    </testcase>
-  </testsuite>
-</testsuites>
