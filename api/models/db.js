@@ -1,8 +1,8 @@
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host     : 'azuredevopsdemodb.mysql.database.azure.com',
-    user     : 'sumit@azuredevopsdemodb',
+    host     : 'demomysqldevops.mysql.database.azure.com',
+    user     : 'sumit@demomysqldevops',
     password : 'Kiran@4693',
     database : 'productsdb',
     ssl:true

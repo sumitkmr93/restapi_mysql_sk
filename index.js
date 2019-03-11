@@ -7,11 +7,11 @@ const express = require('express'),
 const mysql = require('mysql');
 // connection configurations
 const mc = mysql.createConnection({
-    host     : 'azuredevopsdemodb.mysql.database.azure.com',
-    user     : 'sumit@azuredevopsdemodb',
-    password : 'Kiran@4693',
-    database : 'ProductsDB',
-    ssl:true
+  host     : 'demomysqldevops.mysql.database.azure.com',
+  user     : 'sumit@demomysqldevops',
+  password : 'Kiran@4693',
+  database : 'productsdb',
+  ssl:true
     // host     : 'localhost',
     // user     : 'root',
     // password : 'c0nygre',

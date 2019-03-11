@@ -10,7 +10,7 @@ describe('Open webapp', ()=>{
    it('should work', ()=>{
    var driver = new webdriver.Builder().
     withCapabilities(webdriver.Capabilities.chrome()).build();
-      driver.get('https://productsdemoazure.azurewebsites.net').then(function(){
+      driver.get('https://azuredevopsdemosumit.azurewebsites.net').then(function(){
          driver.getTitle().then(function(title){
             title.should.equal('Rest API Demo')
             console.log('Functional Test Passed');

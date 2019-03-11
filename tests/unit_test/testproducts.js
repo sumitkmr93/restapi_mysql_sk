@@ -9,7 +9,7 @@ let should = chai.should();
 describe('/GET all products', function()  {
   this.timeout(15000);
   it('it should GET all the bookings', (done) => {
-    chai.request('https://productsdemoazure.azurewebsites.net/products')
+    chai.request('https://azuredevopsdemosumit.azurewebsites.net')
         .get('/')
         .end((err, res) => {
               res.should.have.status(200);
@@ -27,7 +27,7 @@ describe('/POST add a product', () => {
           price : 20,
           stock : 100
       }
-      chai.request('https://productsdemoazure.azurewebsites.net/products')
+      chai.request('https://azuredevopsdemosumit.azurewebsites.net/products')
         .post('/')
         .send(product)
         .end((err, res) => {
@@ -45,7 +45,7 @@ describe('/PUT change a product', () => {
       let product = {
         name: "TestProduct",
       }
-      chai.request('https://productsdemoazure.azurewebsites.net/products')
+      chai.request('https://azuredevopsdemosumit.azurewebsites.net/products')
         .put('/1')
         .send(product)
         .end((err, res) => {
@@ -59,7 +59,7 @@ describe('/PUT change a product', () => {
 
 describe('/DELETE a product', () => {
   it('DELETE a booking', (done) => {
-      chai.request('https://productsdemoazure.azurewebsites.net/products')
+      chai.request('https://azuredevopsdemosumit.azurewebsites.net/products')
         .delete('/1')
         .end((err, res) => {
           res.should.have.status(200);
