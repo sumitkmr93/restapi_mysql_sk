@@ -7,8 +7,8 @@ $(document).ready(function(){
           var options = "";
           for(var i = 0;i < response.length; i++)
           {
-              options += "<option value='" + response[i].id + "'>" +
-              response[i].name+ "</option>";
+              options += "<option value='" + response[i].pid + "'>" +
+              response[i].pname+ "</option>";
           }
           $("#products").html(options);
       }
@@ -20,7 +20,7 @@ $(document).ready(function(){
         type: 'GET',
         cache: false,
         success: function(response){
-              $("#name").val(response[0].name);
+              $("#name").val(response[0].pname);
               $("#price").val(response[0].price);
               $("#stock").val(response[0].stock);
             }
@@ -34,7 +34,7 @@ $(document).ready(function(){
       $.ajax({
         url: '/products/' + $("#products").val(),
         type: 'PUT',
-        data: {name:Tname,price:Tprice,stock:Tstock},
+        data: {pname:Tname,price:Tprice,stock:Tstock},
         cache: false,
         success: function(response){
           alert('Update was performed');
@@ -50,7 +50,7 @@ $(document).ready(function(){
       $.ajax({
         url: '/products/',
         type: 'POST',
-        data: "name=" +$("#name").val() + "&price=" + $("#price").val() +"&stock=" + $("#stock").val(),
+        data: "pname=" +$("#name").val() + "&price=" + $("#price").val() +"&stock=" + $("#stock").val(),
         success: function(response){
             alert('New Product Added');
             window.location.reload();

@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
     host     : 'azuredevopsdemodb.mysql.database.azure.com',
     user     : 'sumit@azuredevopsdemodb',
     password : 'Kiran@4693',
-    database : 'ProductsDB',
+    database : 'productsdb',
     ssl:true
     // host     : 'localhost',
     // user     : 'root',

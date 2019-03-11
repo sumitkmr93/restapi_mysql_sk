@@ -24,7 +24,7 @@ Product.createproduct = function createUser(newproduct, result) {
 };
 //function to display a new Product by id using actual sql query
 Product.getproductById = function createUser(productId, result) {
-        sql.query("Select id,pname,price,stock from products where id = ? ", productId, function (err, res) {             
+        sql.query("Select pid,pname,price,stock from products where pid = ? ", productId, function (err, res) {             
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
@@ -52,7 +52,7 @@ Product.getAllproduct = function getAllproduct(result) {
 };
 //function to upadte a Product by id using actual sql query
 Product.updateById = function(id, product, result){
-  sql.query("UPDATE products SET pname = ?, price = ?, stock = ? WHERE id = ?", [product.name,product.price,product.stock, id], function (err, res) {
+  sql.query("UPDATE products SET pname = ?, price = ?, stock = ? WHERE pid = ?", [product.pname,product.price,product.stock, id], function (err, res) {
           if(err) {
               console.log("error: ", err);
                 result(null, err);
@@ -64,7 +64,7 @@ Product.updateById = function(id, product, result){
 };
 //function to delete a Product by id using actual sql query
 Product.remove = function(id, result){
-     sql.query("DELETE FROM products WHERE id = ?", [id], function (err, res) {
+     sql.query("DELETE FROM products WHERE pid = ?", [id], function (err, res) {
 
                 if(err) {
                     console.log("error: ", err);
