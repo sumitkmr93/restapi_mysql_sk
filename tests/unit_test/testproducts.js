@@ -9,7 +9,7 @@ let should = chai.should();
 describe('/GET all products', function()  {
   this.timeout(15000);
   it('it should GET all the bookings', (done) => {
-    chai.request('https://azuredevopsdemosumit.azurewebsites.net')
+    chai.request('https://azuredevopsdemosumit.azurewebsites.net/products')
         .get('/')
         .end((err, res) => {
               res.should.have.status(200);
