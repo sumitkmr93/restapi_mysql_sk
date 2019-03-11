@@ -23,7 +23,7 @@ describe('/GET all products', function()  {
 describe('/POST add a product', () => {
   it('Post a booking', (done) => {
       let product = {
-          name : "TestProduct",
+          pname : "TestProduct",
           price : 20,
           stock : 100
       }
